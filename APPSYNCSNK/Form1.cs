@@ -46,8 +46,15 @@ namespace APPSYNCSNK
             //base.OnLoad(e);
 
 
+            //Visible = false; // Hide form window.
+            //ShowInTaskbar = false; // Remove from taskbar.
+            //Opacity = 0;
+
+            //base.OnLoad(e);
+
+
             txtminutes.Text = "15";
-            btnon.PerformClick(); 
+            btnon.PerformClick();
         }
 
         private void btnon_Click(object sender, EventArgs e)
