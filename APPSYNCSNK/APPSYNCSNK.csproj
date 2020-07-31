@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{706D33DB-1781-424C-B4A7-853E2A3D0B48}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APPSYNCSNK</RootNamespace>
+    <AssemblyName>APPSYNCSNK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="author_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="author_menu_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buyer_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buyer_info_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buyer_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="buyer_info_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="comm_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="comm_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="date_ymd.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSNK_INTERFACE.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSNK_INTERFACE.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSNK_INTERFACE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSNK_INTERFACE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSNK_INTERFACE.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DBSNK_SQL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSNK_SQL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSNK_SQL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSNK_SQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSNK_SQL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSNK_SQL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SNK.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SNK.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SNK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SNK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SNK.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="department_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bobbin_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bobbin_lct_hist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_detail_copy.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_detail_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_detail_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_detail_interface_copy.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_detail_interface_copy_copy.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_detail_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_info_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_info_interface_29062020.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_info_interface_copy.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_info_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info_interface_copy.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info_interface_copy2.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info_interface_view.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_bom_part_info_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_box_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_line_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_line_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_line_mc_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_line_next_process.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_line_process_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_line_process_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_line_unit_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_machine_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_machine_infoxxx.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info_copy.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info_copy_28_04.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info_interface_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info_interface_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info_temp.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_info_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_material_lct_hist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_model_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_mold_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_pro_unit.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_pro_unit_mc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_pro_unit_staff.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_style_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_style_detail_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_style_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_style_info_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_style_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_style_info_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="d_tray_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="equipment_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="file_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitMethods.cs" />
+    <Compile Include="interface_info.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lct_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="lct_info_copy.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="manufac_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mb_author_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mb_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mb_info_2.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mb_info_copy.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mb_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mb_lct_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mb_message.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="menu_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="migration.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model_part_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model_ref_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_board.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_display_issue.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_display_policy.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_display_policydetail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_facline_qc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_facline_qc_value.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_layout_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_layout_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_line_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_day.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_dayhist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_daytime.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_info_old.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_process.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_qc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facline_sim.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_order_facsim_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_time_sync.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_tot_inspect_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_tot_inspect_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="m_work_order.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="notice_board.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="photo_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchaseapprovaldetail_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="purchaseapproval_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="purchasescheduledetail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="purchasestatusdetail_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_detail_2.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_detail_3.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_detail_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_detail_interface_copy2.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_info_2.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_info_3.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_info_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_info_interface_copy.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_info_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_qc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_qc_value.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_return.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="p_mpo_sub.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qc_itemcheck_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qc_itemcheck_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qc_item_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_info_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplier_info_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="syncDATA.cs" />
+    <Compile Include="sync_log.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sync_log_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_day.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_dayhist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_daytime.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_master.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_qc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_cutting_qc_value.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_factory_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_factory_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_factory_master.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_copy_13.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_copy_29_04.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_interface_view.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_test.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_test2.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_info_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_master.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_master_copy_28042020.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_master_insert_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_master_interface.cs">
+      <DependentUpon>DBSNK_INTERFACE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_master_update_view.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_ship_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="s_order_ship_master.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tmp.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_author.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_membership.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_oauthmembership.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_box_mapping.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_box_public.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_dbox_mapping.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_dtray_mapping.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_enviro_hist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_enviro_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_lbox_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_lbox_hist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_lbox_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_lbox_type.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_material_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_material_info_copy.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_material_lct_hist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_material_mapping.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_material_map_mc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_material_map_staff.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_mpo_hist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_mr_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_mr_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_policy_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_inspect.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_inspect_value.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_lct_hist.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_lot_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_mapping.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_map_mc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_map_staff.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_qc.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_product_qc_value.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_pr_sms_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_pr_sms_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_psdpd_list.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_psd_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_psd_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_pvt_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_pvt_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_rdmt_list.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_rd_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_rd_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_sbox_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_sbox_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_sbox_type.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_sdmt_list.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_sd_detail.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_sd_info.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_vt_dt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_vt_mt.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_wip_return.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <Compile Include="w_worktime_ymd.cs">
+      <DependentUpon>DB_SNK.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="bin\Debug\EXCEL\BOMDT\MasterBOM_179 codes_23 July 20.xlsx" />
+    <None Include="bin\Debug\EXCEL\BOM\MasterBOM_179 codes_23 July 20.xlsx" />
+    <None Include="bin\Debug\EXCEL\PMSDT\PMS_20-July-20.xlsx" />
+    <EntityDeploy Include="DBSNK_SQL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBSNK_SQL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DBSNK_INTERFACE.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBSNK_INTERFACE.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBSNK_INTERFACE.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSNK_INTERFACE.edmx</DependentUpon>
+      <LastGenOutput>DBSNK_INTERFACE.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DBSNK_INTERFACE.edmx.diagram">
+      <DependentUpon>DBSNK_INTERFACE.edmx</DependentUpon>
+    </None>
+    <None Include="DBSNK_INTERFACE.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSNK_INTERFACE.edmx</DependentUpon>
+      <LastGenOutput>DBSNK_INTERFACE.cs</LastGenOutput>
+    </None>
+    <None Include="DBSNK_SQL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSNK_SQL.edmx</DependentUpon>
+      <LastGenOutput>DBSNK_SQL.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DBSNK_SQL.edmx.diagram">
+      <DependentUpon>DBSNK_SQL.edmx</DependentUpon>
+    </None>
+    <None Include="DBSNK_SQL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSNK_SQL.edmx</DependentUpon>
+      <LastGenOutput>DBSNK_SQL.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="DB_SNK.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_SNK.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB_SNK.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SNK.edmx</DependentUpon>
+      <LastGenOutput>DB_SNK.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DB_SNK.edmx.diagram">
+      <DependentUpon>DB_SNK.edmx</DependentUpon>
+    </None>
+    <None Include="DB_SNK.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SNK.edmx</DependentUpon>
+      <LastGenOutput>DB_SNK.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,2559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="snk_interfaceModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="snk_interfaceModelStoreContainer">
+          <EntitySet Name="buyer_info_interface" EntityType="snk_interfaceModel.Store.buyer_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_detail_interface" EntityType="snk_interfaceModel.Store.d_bom_detail_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_detail_interface_copy" EntityType="snk_interfaceModel.Store.d_bom_detail_interface_copy" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_detail_interface_copy_copy" EntityType="snk_interfaceModel.Store.d_bom_detail_interface_copy_copy" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_info_interface" EntityType="snk_interfaceModel.Store.d_bom_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_info_interface_29062020" EntityType="snk_interfaceModel.Store.d_bom_info_interface_29062020" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_info_interface_copy" EntityType="snk_interfaceModel.Store.d_bom_info_interface_copy" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_part_info_interface" EntityType="snk_interfaceModel.Store.d_bom_part_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_part_info_interface_copy" EntityType="snk_interfaceModel.Store.d_bom_part_info_interface_copy" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_part_info_interface_copy2" EntityType="snk_interfaceModel.Store.d_bom_part_info_interface_copy2" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_line_info_interface" EntityType="snk_interfaceModel.Store.d_line_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_line_process_info_interface" EntityType="snk_interfaceModel.Store.d_line_process_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_material_info_interface" EntityType="snk_interfaceModel.Store.d_material_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_style_detail_interface" EntityType="snk_interfaceModel.Store.d_style_detail_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_style_info_interface" EntityType="snk_interfaceModel.Store.d_style_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="interface_info" EntityType="snk_interfaceModel.Store.interface_info" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="mb_info_interface" EntityType="snk_interfaceModel.Store.mb_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="p_mpo_detail_interface" EntityType="snk_interfaceModel.Store.p_mpo_detail_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="p_mpo_detail_interface_copy2" EntityType="snk_interfaceModel.Store.p_mpo_detail_interface_copy2" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="p_mpo_info_interface" EntityType="snk_interfaceModel.Store.p_mpo_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="p_mpo_info_interface_copy" EntityType="snk_interfaceModel.Store.p_mpo_info_interface_copy" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="s_order_info_interface" EntityType="snk_interfaceModel.Store.s_order_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="s_order_master_interface" EntityType="snk_interfaceModel.Store.s_order_master_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="supplier_info_interface" EntityType="snk_interfaceModel.Store.supplier_info_interface" store:Type="Tables" Schema="snk_interface" />
+          <EntitySet Name="d_bom_part_info_interface_view" EntityType="snk_interfaceModel.Store.d_bom_part_info_interface_view" store:Type="Views" store:Schema="snk_interface" store:Name="d_bom_part_info_interface_view">
+            <DefiningQuery>SELECT
+      `d_bom_part_info_interface_view`.`bom_no2`, 
+      `d_bom_part_info_interface_view`.`part_no2`, 
+      `d_bom_part_info_interface_view`.`step_cd`, 
+      `d_bom_part_info_interface_view`.`bpid`, 
+      `d_bom_part_info_interface_view`.`bom_no`, 
+      `d_bom_part_info_interface_view`.`part_no`, 
+      `d_bom_part_info_interface_view`.`part_nm`, 
+      `d_bom_part_info_interface_view`.`mt_no`, 
+      `d_bom_part_info_interface_view`.`need_time`, 
+      `d_bom_part_info_interface_view`.`use_yn`, 
+      `d_bom_part_info_interface_view`.`del_yn`, 
+      `d_bom_part_info_interface_view`.`reg_id`, 
+      `d_bom_part_info_interface_view`.`reg_dt`, 
+      `d_bom_part_info_interface_view`.`chg_id`, 
+      `d_bom_part_info_interface_view`.`chg_dt`
+      FROM `d_bom_part_info_interface_view` AS `d_bom_part_info_interface_view`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="s_order_info_interface_view" EntityType="snk_interfaceModel.Store.s_order_info_interface_view" store:Type="Views" store:Schema="snk_interface" store:Name="s_order_info_interface_view">
+            <DefiningQuery>SELECT
+      `s_order_info_interface_view`.`soid`, 
+      `s_order_info_interface_view`.`pm_no`, 
+      `s_order_info_interface_view`.`po_no`, 
+      `s_order_info_interface_view`.`po_no2`, 
+      `s_order_info_interface_view`.`po_dt`, 
+      `s_order_info_interface_view`.`po_sts`, 
+      `s_order_info_interface_view`.`sp_nm`, 
+      `s_order_info_interface_view`.`so_no`, 
+      `s_order_info_interface_view`.`branch_nm`, 
+      `s_order_info_interface_view`.`employee_nm`, 
+      `s_order_info_interface_view`.`sor_sts_nm`, 
+      `s_order_info_interface_view`.`contract_no`, 
+      `s_order_info_interface_view`.`contract_dt`, 
+      `s_order_info_interface_view`.`style_no`, 
+      `s_order_info_interface_view`.`style_nm`, 
+      `s_order_info_interface_view`.`style_no_fgc`, 
+      `s_order_info_interface_view`.`style_nm_fgc`, 
+      `s_order_info_interface_view`.`prd_unit`, 
+      `s_order_info_interface_view`.`bom_no`, 
+      `s_order_info_interface_view`.`order_dt`, 
+      `s_order_info_interface_view`.`product_dt`, 
+      `s_order_info_interface_view`.`delivery_dt`, 
+      `s_order_info_interface_view`.`dest_cd`, 
+      `s_order_info_interface_view`.`prod_qty`, 
+      `s_order_info_interface_view`.`delivery_qty`, 
+      `s_order_info_interface_view`.`fo_qty`, 
+      `s_order_info_interface_view`.`so_qty`, 
+      `s_order_info_interface_view`.`fo_rm_qty`, 
+      `s_order_info_interface_view`.`so_rm_qty`, 
+      `s_order_info_interface_view`.`re_mark`, 
+      `s_order_info_interface_view`.`use_yn`, 
+      `s_order_info_interface_view`.`del_yn`, 
+      `s_order_info_interface_view`.`reg_id`, 
+      `s_order_info_interface_view`.`reg_dt`, 
+      `s_order_info_interface_view`.`chg_id`, 
+      `s_order_info_interface_view`.`chg_dt`
+      FROM `s_order_info_interface_view` AS `s_order_info_interface_view`</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="buyer_info_interface">
+          <Key>
+            <PropertyRef Name="byno" />
+          </Key>
+          <Property Name="byno" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="buyer_cd" Type="varchar" MaxLength="20" />
+          <Property Name="buyer_nm" Type="varchar" MaxLength="250" />
+          <Property Name="small_customer" Type="varchar" MaxLength="100" />
+          <Property Name="brd_nm" Type="varchar" MaxLength="50" />
+          <Property Name="ceo_nm" Type="varchar" MaxLength="50" />
+          <Property Name="manager_nm" Type="varchar" MaxLength="50" />
+          <Property Name="logo" Type="varchar" MaxLength="200" />
+          <Property Name="phone_nb" Type="varchar" MaxLength="20" />
+          <Property Name="cell_nb" Type="varchar" MaxLength="20" />
+          <Property Name="fax_nb" Type="varchar" MaxLength="20" />
+          <Property Name="e_mail" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="200" />
+          <Property Name="web_site" Type="varchar" MaxLength="50" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'udecimal' is currently not supported for the target .NET Framework version; the column 'need_qty' in table 'def.snk_interface.d_bom_detail_interface' was excluded.
+      warning 6005: The data type 'udecimal' is currently not supported for the target .NET Framework version; the column 'feed_size' in table 'def.snk_interface.d_bom_detail_interface' was excluded.
+      -->
+        <EntityType Name="d_bom_detail_interface">
+          <Key>
+            <PropertyRef Name="bdid" />
+          </Key>
+          <Property Name="bdid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_no" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="feed_unit" Type="varchar" MaxLength="500" />
+          <Property Name="div_cd" Type="varchar" MaxLength="6" />
+          <Property Name="chg_ver" Type="int" />
+          <Property Name="chg_cd" Type="varchar" MaxLength="6" />
+          <Property Name="remark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'udecimal' is currently not supported for the target .NET Framework version; the column 'need_qty' in table 'def.snk_interface.d_bom_detail_interface_copy' was excluded.
+      warning 6005: The data type 'udecimal' is currently not supported for the target .NET Framework version; the column 'feed_size' in table 'def.snk_interface.d_bom_detail_interface_copy' was excluded.
+      -->
+        <EntityType Name="d_bom_detail_interface_copy">
+          <Key>
+            <PropertyRef Name="bdid" />
+          </Key>
+          <Property Name="bdid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_no" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="lot_pct" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="step_cd" Type="varchar" MaxLength="200" />
+          <Property Name="item_cd" Type="varchar" MaxLength="500" />
+          <Property Name="csp" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="feed_unit" Type="varchar" MaxLength="500" />
+          <Property Name="div_cd" Type="varchar" MaxLength="6" />
+          <Property Name="chg_ver" Type="int" />
+          <Property Name="chg_cd" Type="varchar" MaxLength="6" />
+          <Property Name="remark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+          <Property Name="part_nm" Type="varchar" MaxLength="500" />
+          <Property Name="key_id" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'udecimal' is currently not supported for the target .NET Framework version; the column 'need_qty' in table 'def.snk_interface.d_bom_detail_interface_copy_copy' was excluded.
+      warning 6005: The data type 'udecimal' is currently not supported for the target .NET Framework version; the column 'feed_size' in table 'def.snk_interface.d_bom_detail_interface_copy_copy' was excluded.
+      -->
+        <EntityType Name="d_bom_detail_interface_copy_copy">
+          <Key>
+            <PropertyRef Name="bdid" />
+          </Key>
+          <Property Name="bdid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_no" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="lot_pct" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="step_cd" Type="varchar" MaxLength="200" />
+          <Property Name="item_cd" Type="varchar" MaxLength="500" />
+          <Property Name="csp" Type="decimal" Precision="18" Scale="5" />
+          <Property Name="feed_unit" Type="varchar" MaxLength="500" />
+          <Property Name="div_cd" Type="varchar" MaxLength="6" />
+          <Property Name="chg_ver" Type="int" />
+          <Property Name="chg_cd" Type="varchar" MaxLength="6" />
+          <Property Name="remark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+          <Property Name="id" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="d_bom_info_interface">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="50" />
+          <Property Name="ver" Type="char" MaxLength="1" />
+          <Property Name="style_no" Type="varchar" MaxLength="100" />
+          <Property Name="style_nm" Type="varchar" MaxLength="500" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="20" />
+          <Property Name="del_yn" Type="char" MaxLength="20" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="d_bom_info_interface_29062020">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="50" />
+          <Property Name="ver" Type="char" MaxLength="1" />
+          <Property Name="style_no" Type="varchar" MaxLength="100" />
+          <Property Name="style_nm" Type="varchar" MaxLength="500" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="20" />
+          <Property Name="del_yn" Type="char" MaxLength="20" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="d_bom_info_interface_copy">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="50" />
+          <Property Name="ver" Type="char" MaxLength="1" />
+          <Property Name="style_no" Type="varchar" MaxLength="50" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="20" />
+          <Property Name="del_yn" Type="char" MaxLength="20" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="d_bom_part_info_interface">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bpid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="d_bom_part_info_interface_copy">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bpid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="d_bom_part_info_interface_copy2">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bpid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="d_line_info_interface">
+          <Key>
+            <PropertyRef Name="lid" />
+          </Key>
+          <Property Name="lid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fac_cd" Type="varchar" MaxLength="6" />
+          <Property Name="line_no" Type="varchar" MaxLength="20" />
+          <Property Name="line_nm" Type="varchar" MaxLength="200" />
+          <Property Name="bom_no" Type="varchar" MaxLength="20" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+        </EntityType>
+        <EntityType Name="d_line_process_info_interface">
+          <Key>
+            <PropertyRef Name="dlpid" />
+          </Key>
+          <Property Name="dlpid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="line_no" Type="varchar" MaxLength="20" />
+          <Property Name="process_no" Type="varchar" MaxLength="20" />
+          <Property Name="process_nm" Type="varchar" MaxLength="200" />
+          <Property Name="process_type" Type="varchar" MaxLength="6" />
+          <Property Name="prounit_cd" Type="varchar" MaxLength="20" />
+          <Property Name="item_vcd" Type="varchar" MaxLength="20" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="qc_range_cd" Type="varchar" MaxLength="6" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="man_num" Type="decimal" Precision="7" Scale="1" />
+          <Property Name="color" Type="varchar" MaxLength="20" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="photo_file" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="d_material_info_interface">
+          <Key>
+            <PropertyRef Name="mtid" />
+          </Key>
+          <Property Name="mtid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mt_type" Type="varchar" MaxLength="250" />
+          <Property Name="mt_no" Type="varchar" MaxLength="200" />
+          <Property Name="mt_cd" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no_origin" Type="varchar" />
+          <Property Name="mt_nm" Type="varchar" />
+          <Property Name="mf_cd" Type="varchar" MaxLength="20" />
+          <Property Name="gr_qty" Type="varchar" MaxLength="20" />
+          <Property Name="unit_cd" Type="varchar" MaxLength="6" />
+          <Property Name="bundle_qty" Type="varchar" MaxLength="6" />
+          <Property Name="bundle_unit" Type="varchar" MaxLength="200" />
+          <Property Name="sp_cd" Type="varchar" MaxLength="200" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="200" />
+          <Property Name="s_lot_no" Type="varchar" MaxLength="100" />
+          <Property Name="item_vcd" Type="varchar" MaxLength="20" />
+          <Property Name="qc_range_cd" Type="varchar" MaxLength="6" />
+          <Property Name="width" Type="varchar" MaxLength="20" />
+          <Property Name="width_unit" Type="varchar" MaxLength="3" />
+          <Property Name="spec" Type="varchar" MaxLength="20" />
+          <Property Name="spec_unit" Type="varchar" MaxLength="3" />
+          <Property Name="area" Type="varchar" MaxLength="20" />
+          <Property Name="area_unit" Type="varchar" MaxLength="3" />
+          <Property Name="thick" Type="varchar" MaxLength="20" />
+          <Property Name="thick_unit" Type="varchar" MaxLength="3" />
+          <Property Name="stick" Type="varchar" MaxLength="20" />
+          <Property Name="stick_unit" Type="varchar" MaxLength="6" />
+          <Property Name="price" Type="varchar" MaxLength="20" />
+          <Property Name="tot_price" Type="varchar" MaxLength="20" />
+          <Property Name="price_unit" Type="varchar" MaxLength="50" />
+          <Property Name="price_least_unit" Type="varchar" MaxLength="50" />
+          <Property Name="photo_file" Type="varchar" MaxLength="100" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="20" />
+          <Property Name="del_yn" Type="char" MaxLength="20" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="d_style_detail_interface">
+          <Key>
+            <PropertyRef Name="ssid" />
+          </Key>
+          <Property Name="ssid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="style_no" Type="varchar" MaxLength="100" />
+          <Property Name="style_sub_no" Type="varchar" MaxLength="100" />
+          <Property Name="style_sub_nm" Type="varchar" MaxLength="200" />
+          <Property Name="style_sub_vn_nm" Type="varchar" MaxLength="200" />
+          <Property Name="use_yn" Type="char" MaxLength="20" />
+          <Property Name="del_yn" Type="char" Nullable="false" MaxLength="20" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+        </EntityType>
+        <EntityType Name="d_style_info_interface">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="style_no" Type="varchar" MaxLength="500" />
+          <Property Name="style_cust_no" Type="varchar" MaxLength="500" />
+          <Property Name="style_nm" Type="varchar" MaxLength="500" />
+          <Property Name="style_vn_nm" Type="varchar" MaxLength="200" />
+          <Property Name="wh_nm" Type="varchar" MaxLength="200" />
+          <Property Name="buyer_nm" Type="varchar" MaxLength="250" />
+          <Property Name="ivtr_type" Type="varchar" MaxLength="100" />
+          <Property Name="routing" Type="varchar" MaxLength="100" />
+          <Property Name="prd_unit" Type="varchar" MaxLength="20" />
+          <Property Name="s_length" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_width" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_height" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_top" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="case_pcs_qty" Type="int" />
+          <Property Name="c_length" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="c_width" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="c_height" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="c_cbm" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="prd_group" Type="varchar" MaxLength="20" />
+          <Property Name="prd_ctgr" Type="varchar" MaxLength="20" />
+          <Property Name="prd_brand" Type="varchar" MaxLength="20" />
+          <Property Name="prd_app" Type="varchar" MaxLength="20" />
+          <Property Name="fsc_type" Type="varchar" MaxLength="100" />
+          <Property Name="fsc_prd_type" Type="varchar" MaxLength="100" />
+          <Property Name="fsc_group" Type="varchar" MaxLength="100" />
+          <Property Name="ivt_group_08" Type="varchar" MaxLength="20" />
+          <Property Name="ivt_group_09" Type="varchar" MaxLength="20" />
+          <Property Name="ivt_group_10" Type="varchar" MaxLength="20" />
+          <Property Name="s_weight" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_weight_unit" Type="varchar" MaxLength="20" />
+          <Property Name="s_weight_ratio" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_volume" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_volume_unit" Type="varchar" MaxLength="20" />
+          <Property Name="s_surface" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_surface_unit" Type="varchar" MaxLength="20" />
+          <Property Name="s_tolerance" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="s_leadtime" Type="decimal" Precision="11" Scale="3" />
+          <Property Name="md_cd" Type="varchar" />
+          <Property Name="prj_nm" Type="varchar" MaxLength="100" />
+          <Property Name="ssver" Type="varchar" MaxLength="50" />
+          <Property Name="part_nm" Type="varchar" MaxLength="200" />
+          <Property Name="standard" Type="varchar" MaxLength="200" />
+          <Property Name="cust_rev" Type="varchar" MaxLength="200" />
+          <Property Name="order_num" Type="varchar" MaxLength="50" />
+          <Property Name="pack_amt" Type="int" />
+          <Property Name="cav" Type="varchar" MaxLength="50" />
+          <Property Name="bom_type" Type="varchar" MaxLength="50" />
+          <Property Name="tds_no" Type="varchar" MaxLength="50" />
+          <Property Name="item_vcd" Type="varchar" MaxLength="20" />
+          <Property Name="qc_range_cd" Type="varchar" MaxLength="6" />
+          <Property Name="use_yn" Type="char" MaxLength="20" />
+          <Property Name="del_yn" Type="char" Nullable="false" MaxLength="20" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+        </EntityType>
+        <EntityType Name="interface_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="inf_nm" Type="varchar" MaxLength="500" />
+          <Property Name="inf_last_time" Type="varchar" MaxLength="14" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="last_yn" Type="char" MaxLength="1" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="mb_info_interface">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="userid" Type="varchar" MaxLength="50" />
+          <Property Name="uname" Type="varchar" MaxLength="200" />
+          <Property Name="nick_name" Type="varchar" MaxLength="50" />
+          <Property Name="upw" Type="varchar" MaxLength="50" />
+          <Property Name="grade" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="char" MaxLength="1" />
+          <Property Name="depart_cd" Type="varchar" MaxLength="9" />
+          <Property Name="depart_nm" Type="varchar" MaxLength="100" />
+          <Property Name="position_cd" Type="varchar" MaxLength="6" />
+          <Property Name="position_nm" Type="varchar" MaxLength="100" />
+          <Property Name="tel_nb" Type="varchar" MaxLength="20" />
+          <Property Name="cel_nb" Type="varchar" MaxLength="20" />
+          <Property Name="e_mail" Type="varchar" MaxLength="100" />
+          <Property Name="sms_yn" Type="char" MaxLength="1" />
+          <Property Name="join_dt" Type="varchar" MaxLength="8" />
+          <Property Name="birth_dt" Type="varchar" MaxLength="8" />
+          <Property Name="scr_yn" Type="char" MaxLength="1" />
+          <Property Name="mail_yn" Type="char" MaxLength="1" />
+          <Property Name="join_ip" Type="varchar" MaxLength="50" />
+          <Property Name="join_domain" Type="varchar" MaxLength="100" />
+          <Property Name="ltacc_dt" Type="timestamp" />
+          <Property Name="ltacc_domain" Type="varchar" MaxLength="100" />
+          <Property Name="mbout_dt" Type="timestamp" />
+          <Property Name="mbout_yn" Type="char" MaxLength="1" />
+          <Property Name="accblock_yn" Type="char" MaxLength="1" />
+          <Property Name="session_key" Type="varchar" MaxLength="50" />
+          <Property Name="session_limit" Type="timestamp" />
+          <Property Name="memo" Type="varchar" MaxLength="500" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="check_yn" Type="char" MaxLength="1" />
+          <Property Name="rem_me" Type="char" MaxLength="1" />
+          <Property Name="mbjoin_dt" Type="timestamp" />
+          <Property Name="log_ip" Type="varchar" MaxLength="50" />
+          <Property Name="lct_cd" Type="varchar" MaxLength="18" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+          <Property Name="re_mark" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="p_mpo_detail_interface">
+          <Key>
+            <PropertyRef Name="pdid" />
+          </Key>
+          <Property Name="pdid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="varchar" MaxLength="500" />
+          <Property Name="mdpo_no" Type="varchar" MaxLength="11" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="mt_cd" Type="varchar" MaxLength="500" />
+          <Property Name="md_sts_cd" Type="varchar" MaxLength="6" />
+          <Property Name="lct_cd" Type="varchar" MaxLength="18" />
+          <Property Name="exp_input_dt" Type="varchar" MaxLength="14" />
+          <Property Name="public_cd" Type="varchar" MaxLength="6" />
+          <Property Name="need_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="feed_size" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="feed_unit" Type="varchar" MaxLength="3" />
+          <Property Name="pur_bundle_qty" Type="int" />
+          <Property Name="bundle_unit" Type="varchar" MaxLength="6" />
+          <Property Name="act_pur_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="qty_stk" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit" Type="varchar" MaxLength="100" />
+          <Property Name="pur_unit_nm" Type="varchar" MaxLength="100" />
+          <Property Name="unit_price" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit_stk" Type="varchar" MaxLength="100" />
+          <Property Name="unit_price_stk" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="price_unit_cd" Type="varchar" MaxLength="6" />
+          <Property Name="tot_pur_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="last_unit_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="tot_last_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="vat_cd" Type="varchar" MaxLength="6" />
+          <Property Name="vat_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="pay_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="act_pay_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="rec_input_dt" Type="varchar" MaxLength="50" />
+          <Property Name="pass_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="bundle_unit_qty" Type="decimal" Precision="6" Scale="3" />
+          <Property Name="bundle_qty" Type="int" />
+          <Property Name="gr_qty" Type="int" />
+          <Property Name="qr_qty" Type="int" />
+          <Property Name="rec_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="rec_bundle_qty" Type="int" />
+          <Property Name="defect_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="def_reson_cd" Type="varchar" MaxLength="6" />
+          <Property Name="expiry_dt" Type="varchar" MaxLength="14" />
+          <Property Name="return_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="return_reson_cd" Type="varchar" MaxLength="6" />
+          <Property Name="sp_cd" Type="varchar" MaxLength="50" />
+          <Property Name="order_dt" Type="varchar" MaxLength="8" />
+          <Property Name="pur_order_no" Type="varchar" MaxLength="200" />
+          <Property Name="shipment" Type="varchar" MaxLength="6" />
+          <Property Name="lot_no" Type="varchar" MaxLength="50" />
+          <Property Name="voucher" Type="varchar" MaxLength="50" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="lct_sts_cd" Type="varchar" MaxLength="6" />
+          <Property Name="waybill_file" Type="varchar" MaxLength="200" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+          <Property Name="po_sts" Type="varchar" MaxLength="100" />
+          <Property Name="mpo_desc" Type="varchar" MaxLength="500" />
+          <Property Name="mt_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mt_spec" Type="varchar" MaxLength="500" />
+          <Property Name="mt_width" Type="varchar" MaxLength="500" />
+          <Property Name="mt_height" Type="varchar" MaxLength="500" />
+          <Property Name="mt_thick" Type="varchar" MaxLength="500" />
+          <Property Name="mt_re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="brand_no" Type="varchar" MaxLength="500" />
+          <Property Name="brand_nm" Type="varchar" MaxLength="500" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="p_mpo_detail_interface_copy2">
+          <Key>
+            <PropertyRef Name="pdid" />
+          </Key>
+          <Property Name="pdid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="varchar" MaxLength="500" />
+          <Property Name="mdpo_no" Type="varchar" MaxLength="11" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="mt_cd" Type="varchar" MaxLength="500" />
+          <Property Name="md_sts_cd" Type="varchar" MaxLength="6" />
+          <Property Name="lct_cd" Type="varchar" MaxLength="18" />
+          <Property Name="exp_input_dt" Type="varchar" MaxLength="14" />
+          <Property Name="public_cd" Type="varchar" MaxLength="6" />
+          <Property Name="need_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="feed_size" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="feed_unit" Type="varchar" MaxLength="3" />
+          <Property Name="pur_bundle_qty" Type="int" />
+          <Property Name="bundle_unit" Type="varchar" MaxLength="6" />
+          <Property Name="act_pur_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="qty_stk" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit" Type="varchar" MaxLength="100" />
+          <Property Name="pur_unit_nm" Type="varchar" MaxLength="100" />
+          <Property Name="unit_price" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit_stk" Type="varchar" MaxLength="100" />
+          <Property Name="unit_price_stk" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="price_unit_cd" Type="varchar" MaxLength="6" />
+          <Property Name="tot_pur_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="last_unit_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="tot_last_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="vat_cd" Type="varchar" MaxLength="6" />
+          <Property Name="vat_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="pay_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="act_pay_amt" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="rec_input_dt" Type="varchar" MaxLength="50" />
+          <Property Name="pass_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="bundle_unit_qty" Type="decimal" Precision="6" Scale="3" />
+          <Property Name="bundle_qty" Type="int" />
+          <Property Name="gr_qty" Type="int" />
+          <Property Name="qr_qty" Type="int" />
+          <Property Name="rec_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="rec_bundle_qty" Type="int" />
+          <Property Name="defect_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="def_reson_cd" Type="varchar" MaxLength="6" />
+          <Property Name="expiry_dt" Type="varchar" MaxLength="14" />
+          <Property Name="return_qty" Type="decimal" Precision="50" Scale="3" />
+          <Property Name="return_reson_cd" Type="varchar" MaxLength="6" />
+          <Property Name="sp_cd" Type="varchar" MaxLength="50" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+          <Property Name="order_dt" Type="varchar" MaxLength="8" />
+          <Property Name="pur_order_no" Type="varchar" MaxLength="200" />
+          <Property Name="shipment" Type="varchar" MaxLength="6" />
+          <Property Name="lot_no" Type="varchar" MaxLength="50" />
+          <Property Name="voucher" Type="varchar" MaxLength="50" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="lct_sts_cd" Type="varchar" MaxLength="6" />
+          <Property Name="waybill_file" Type="varchar" MaxLength="200" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+          <Property Name="po_sts" Type="varchar" MaxLength="100" />
+          <Property Name="mpo_desc" Type="varchar" MaxLength="500" />
+          <Property Name="mt_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mt_spec" Type="varchar" MaxLength="500" />
+          <Property Name="mt_width" Type="varchar" MaxLength="500" />
+          <Property Name="mt_height" Type="varchar" MaxLength="500" />
+          <Property Name="mt_thick" Type="varchar" MaxLength="500" />
+          <Property Name="mt_re_mark" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="p_mpo_info_interface">
+          <Key>
+            <PropertyRef Name="pmid" />
+          </Key>
+          <Property Name="pmid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="varchar" MaxLength="500" />
+          <Property Name="order_dt" Type="varchar" MaxLength="14" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="mpo_nm" Type="varchar" MaxLength="100" />
+          <Property Name="brand_no" Type="varchar" MaxLength="100" />
+          <Property Name="brand_nm" Type="varchar" MaxLength="100" />
+          <Property Name="po_sts" Type="varchar" MaxLength="100" />
+          <Property Name="sts_mt" Type="varchar" MaxLength="100" />
+          <Property Name="po_no" Type="varchar" MaxLength="14" />
+          <Property Name="purch_cd" Type="varchar" MaxLength="6" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="sp_cd" Type="varchar" MaxLength="50" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mpo_qty" Type="int" />
+          <Property Name="emp_no" Type="varchar" MaxLength="500" />
+          <Property Name="emp_nm" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="p_mpo_info_interface_copy">
+          <Key>
+            <PropertyRef Name="pmid" />
+          </Key>
+          <Property Name="pmid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="varchar" MaxLength="500" />
+          <Property Name="order_dt" Type="varchar" MaxLength="14" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="mpo_nm" Type="varchar" MaxLength="100" />
+          <Property Name="brand_no" Type="varchar" MaxLength="100" />
+          <Property Name="brand_nm" Type="varchar" MaxLength="100" />
+          <Property Name="po_sts" Type="varchar" MaxLength="100" />
+          <Property Name="sts_mt" Type="varchar" MaxLength="100" />
+          <Property Name="po_no" Type="varchar" MaxLength="14" />
+          <Property Name="purch_cd" Type="varchar" MaxLength="6" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="sp_cd" Type="varchar" MaxLength="50" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mpo_qty" Type="int" />
+          <Property Name="emp_no" Type="varchar" MaxLength="500" />
+          <Property Name="emp_nm" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="s_order_info_interface">
+          <Key>
+            <PropertyRef Name="soid" />
+          </Key>
+          <Property Name="soid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pm_no" Type="varchar" MaxLength="50" />
+          <Property Name="po_no" Type="varchar" MaxLength="200" />
+          <Property Name="po_no2" Type="varchar" MaxLength="200" />
+          <Property Name="po_dt" Type="varchar" MaxLength="14" />
+          <Property Name="po_sts" Type="varchar" MaxLength="200" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+          <Property Name="so_no" Type="varchar" MaxLength="500" />
+          <Property Name="branch_nm" Type="varchar" MaxLength="500" />
+          <Property Name="employee_nm" Type="varchar" MaxLength="500" />
+          <Property Name="sor_sts_nm" Type="varchar" MaxLength="500" />
+          <Property Name="contract_no" Type="varchar" MaxLength="500" />
+          <Property Name="contract_dt" Type="varchar" MaxLength="500" />
+          <Property Name="style_no" Type="varchar" MaxLength="500" />
+          <Property Name="style_nm" Type="varchar" MaxLength="500" />
+          <Property Name="style_no_fgc" Type="varchar" MaxLength="500" />
+          <Property Name="style_nm_fgc" Type="varchar" MaxLength="500" />
+          <Property Name="prd_unit" Type="varchar" MaxLength="200" />
+          <Property Name="bom_no" Type="varchar" MaxLength="20" />
+          <Property Name="order_dt" Type="varchar" MaxLength="14" />
+          <Property Name="product_dt" Type="varchar" MaxLength="200" />
+          <Property Name="delivery_dt" Type="varchar" MaxLength="14" />
+          <Property Name="dest_cd" Type="varchar" MaxLength="18" />
+          <Property Name="prod_qty" Type="int" />
+          <Property Name="delivery_qty" Type="int" />
+          <Property Name="fo_qty" Type="int" />
+          <Property Name="so_qty" Type="int" />
+          <Property Name="fo_rm_qty" Type="int" />
+          <Property Name="so_rm_qty" Type="int" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="s_order_master_interface">
+          <Key>
+            <PropertyRef Name="smid" />
+          </Key>
+          <Property Name="smid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pm_no" Type="varchar" MaxLength="200" />
+          <Property Name="order_dt" Type="varchar" MaxLength="50" />
+          <Property Name="prod_cnt" Type="int" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+          <Property Name="employee_nm" Type="varchar" MaxLength="500" />
+          <Property Name="sor_sts_nm" Type="varchar" MaxLength="500" />
+          <Property Name="contract_no" Type="varchar" MaxLength="500" />
+          <Property Name="contract_dt" Type="varchar" MaxLength="500" />
+          <Property Name="delivery_qty" Type="int" />
+          <Property Name="fo_qty" Type="int" />
+          <Property Name="so_qty" Type="int" />
+          <Property Name="fo_rm_qty" Type="int" />
+          <Property Name="so_rm_qty" Type="int" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="supplier_info_interface">
+          <Key>
+            <PropertyRef Name="spno" />
+          </Key>
+          <Property Name="spno" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sp_cd" Type="varchar" MaxLength="200" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="200" />
+          <Property Name="smt_nm" Type="varchar" MaxLength="200" />
+          <Property Name="currency" Type="varchar" MaxLength="200" />
+          <Property Name="pirce_term" Type="varchar" MaxLength="200" />
+          <Property Name="pay_term" Type="varchar" MaxLength="200" />
+          <Property Name="agent_fee" Type="varchar" MaxLength="20" />
+          <Property Name="transit_time" Type="varchar" MaxLength="20" />
+          <Property Name="e_mail" Type="varchar" MaxLength="200" />
+          <Property Name="contant_person" Type="varchar" MaxLength="200" />
+          <Property Name="address" Type="varchar" MaxLength="200" />
+          <Property Name="country_nm" Type="varchar" MaxLength="200" />
+          <Property Name="bsn_tp" Type="varchar" MaxLength="10" />
+          <Property Name="changer_id" Type="varchar" MaxLength="20" />
+          <Property Name="phone_nb" Type="varchar" MaxLength="20" />
+          <Property Name="cell_nb" Type="varchar" MaxLength="20" />
+          <Property Name="fax_nb" Type="varchar" MaxLength="20" />
+          <Property Name="web_site" Type="varchar" MaxLength="200" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="50" />
+          <Property Name="reg_dt" Type="timestamp" Nullable="false" />
+          <Property Name="chg_id" Type="varchar" MaxLength="50" />
+          <Property Name="chg_dt" Type="timestamp" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'def.snk_interface.d_bom_part_info_interface_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="d_bom_part_info_interface_view">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bom_no2" Type="varchar" MaxLength="500" />
+          <Property Name="part_no2" Type="varchar" MaxLength="500" />
+          <Property Name="step_cd" Type="varchar" MaxLength="20" />
+          <Property Name="bpid" Type="int" Nullable="false" />
+          <Property Name="bom_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_no" Type="varchar" MaxLength="500" />
+          <Property Name="part_nm" Type="varchar" MaxLength="500" />
+          <Property Name="mt_no" Type="varchar" MaxLength="500" />
+          <Property Name="need_time" Type="int" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'def.snk_interface.s_order_info_interface_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="s_order_info_interface_view">
+          <Key>
+            <PropertyRef Name="soid" />
+          </Key>
+          <Property Name="soid" Type="int" Nullable="false" />
+          <Property Name="pm_no" Type="varchar" MaxLength="50" />
+          <Property Name="po_no" Type="varchar" MaxLength="200" />
+          <Property Name="po_no2" Type="varchar" MaxLength="200" />
+          <Property Name="po_dt" Type="varchar" MaxLength="14" />
+          <Property Name="po_sts" Type="varchar" MaxLength="200" />
+          <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+          <Property Name="so_no" Type="varchar" MaxLength="500" />
+          <Property Name="branch_nm" Type="varchar" MaxLength="500" />
+          <Property Name="employee_nm" Type="varchar" MaxLength="500" />
+          <Property Name="sor_sts_nm" Type="varchar" MaxLength="500" />
+          <Property Name="contract_no" Type="varchar" MaxLength="500" />
+          <Property Name="contract_dt" Type="varchar" MaxLength="500" />
+          <Property Name="style_no" Type="varchar" MaxLength="500" />
+          <Property Name="style_nm" Type="varchar" MaxLength="500" />
+          <Property Name="style_no_fgc" Type="varchar" MaxLength="500" />
+          <Property Name="style_nm_fgc" Type="varchar" MaxLength="500" />
+          <Property Name="prd_unit" Type="varchar" MaxLength="200" />
+          <Property Name="bom_no" Type="varchar" MaxLength="20" />
+          <Property Name="order_dt" Type="varchar" MaxLength="14" />
+          <Property Name="product_dt" Type="varchar" MaxLength="200" />
+          <Property Name="delivery_dt" Type="varchar" MaxLength="14" />
+          <Property Name="dest_cd" Type="varchar" MaxLength="18" />
+          <Property Name="prod_qty" Type="int" />
+          <Property Name="delivery_qty" Type="int" />
+          <Property Name="fo_qty" Type="int" />
+          <Property Name="so_qty" Type="int" />
+          <Property Name="fo_rm_qty" Type="int" />
+          <Property Name="so_rm_qty" Type="int" />
+          <Property Name="re_mark" Type="varchar" MaxLength="500" />
+          <Property Name="use_yn" Type="char" MaxLength="1" />
+          <Property Name="del_yn" Type="char" MaxLength="1" />
+          <Property Name="reg_id" Type="varchar" MaxLength="20" />
+          <Property Name="reg_dt" Type="timestamp" />
+          <Property Name="chg_id" Type="varchar" MaxLength="20" />
+          <Property Name="chg_dt" Type="timestamp" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'def.snk_interface.lct_info_new' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="lct_info_new">
+        <Property Name="lct_nm" Type="varchar" MaxLength="500" />
+        <Property Name="re_mark" Type="varchar" MaxLength="500" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'def.snk_interface.p_mpo_info_view' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="p_mpo_info_view">
+        <Property Name="mpo_no" Type="varchar" MaxLength="500" />
+        <Property Name="order_dt" Type="varchar" MaxLength="14" />
+        <Property Name="re_mark" Type="varchar" MaxLength="500" />
+        <Property Name="sp_cd" Type="varchar" MaxLength="50" />
+        <Property Name="sp_nm" Type="varchar" MaxLength="500" />
+        <Property Name="mpo_qty" Type="int" />
+        <Property Name="emp_no" Type="varchar" MaxLength="500" />
+        <Property Name="emp_nm" Type="varchar" MaxLength="500" />
+        <Property Name="sts_mt" Type="varchar" MaxLength="100" />
+        <Property Name="brand_no" Type="varchar" MaxLength="100" />
+        <Property Name="brand_nm" Type="varchar" MaxLength="100" />
+        <Property Name="po_sts" Type="varchar" MaxLength="100" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="snk_interfaceModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="snk_interfaceEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="buyer_info_interface" EntityType="snk_interfaceModel.buyer_info_interface" />
+          <EntitySet Name="d_bom_detail_interface" EntityType="snk_interfaceModel.d_bom_detail_interface" />
+          <EntitySet Name="d_bom_detail_interface_copy" EntityType="snk_interfaceModel.d_bom_detail_interface_copy" />
+          <EntitySet Name="d_bom_detail_interface_copy_copy" EntityType="snk_interfaceModel.d_bom_detail_interface_copy_copy" />
+          <EntitySet Name="d_bom_info_interface" EntityType="snk_interfaceModel.d_bom_info_interface" />
+          <EntitySet Name="d_bom_info_interface_29062020" EntityType="snk_interfaceModel.d_bom_info_interface_29062020" />
+          <EntitySet Name="d_bom_info_interface_copy" EntityType="snk_interfaceModel.d_bom_info_interface_copy" />
+          <EntitySet Name="d_bom_part_info_interface" EntityType="snk_interfaceModel.d_bom_part_info_interface" />
+          <EntitySet Name="d_bom_part_info_interface_copy" EntityType="snk_interfaceModel.d_bom_part_info_interface_copy" />
+          <EntitySet Name="d_bom_part_info_interface_copy2" EntityType="snk_interfaceModel.d_bom_part_info_interface_copy2" />
+          <EntitySet Name="d_line_info_interface" EntityType="snk_interfaceModel.d_line_info_interface" />
+          <EntitySet Name="d_line_process_info_interface" EntityType="snk_interfaceModel.d_line_process_info_interface" />
+          <EntitySet Name="d_material_info_interface" EntityType="snk_interfaceModel.d_material_info_interface" />
+          <EntitySet Name="d_style_detail_interface" EntityType="snk_interfaceModel.d_style_detail_interface" />
+          <EntitySet Name="d_style_info_interface" EntityType="snk_interfaceModel.d_style_info_interface" />
+          <EntitySet Name="interface_info" EntityType="snk_interfaceModel.interface_info" />
+          <EntitySet Name="mb_info_interface" EntityType="snk_interfaceModel.mb_info_interface" />
+          <EntitySet Name="p_mpo_detail_interface" EntityType="snk_interfaceModel.p_mpo_detail_interface" />
+          <EntitySet Name="p_mpo_detail_interface_copy2" EntityType="snk_interfaceModel.p_mpo_detail_interface_copy2" />
+          <EntitySet Name="p_mpo_info_interface" EntityType="snk_interfaceModel.p_mpo_info_interface" />
+          <EntitySet Name="p_mpo_info_interface_copy" EntityType="snk_interfaceModel.p_mpo_info_interface_copy" />
+          <EntitySet Name="s_order_info_interface" EntityType="snk_interfaceModel.s_order_info_interface" />
+          <EntitySet Name="s_order_master_interface" EntityType="snk_interfaceModel.s_order_master_interface" />
+          <EntitySet Name="supplier_info_interface" EntityType="snk_interfaceModel.supplier_info_interface" />
+          <EntitySet Name="d_bom_part_info_interface_view" EntityType="snk_interfaceModel.d_bom_part_info_interface_view" />
+          <EntitySet Name="s_order_info_interface_view" EntityType="snk_interfaceModel.s_order_info_interface_view" />
+        </EntityContainer>
+        <EntityType Name="buyer_info_interface">
+          <Key>
+            <PropertyRef Name="byno" />
+          </Key>
+          <Property Name="byno" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="buyer_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="buyer_nm" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="small_customer" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="brd_nm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ceo_nm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="manager_nm" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="logo" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="phone_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="cell_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="fax_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="e_mail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="address" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="web_site" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_detail_interface">
+          <Key>
+            <PropertyRef Name="bdid" />
+          </Key>
+          <Property Name="bdid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="feed_unit" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="div_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="chg_ver" Type="Int32" />
+          <Property Name="chg_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="remark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_detail_interface_copy">
+          <Key>
+            <PropertyRef Name="bdid" />
+          </Key>
+          <Property Name="bdid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="lot_pct" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="step_cd" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="item_cd" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="csp" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="feed_unit" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="div_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="chg_ver" Type="Int32" />
+          <Property Name="chg_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="remark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+          <Property Name="part_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="key_id" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="d_bom_detail_interface_copy_copy">
+          <Key>
+            <PropertyRef Name="bdid" />
+          </Key>
+          <Property Name="bdid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="lot_pct" Type="Decimal" Precision="18" Scale="5" />
+          <Property Name="step_cd" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="item_cd" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="csp" Type="Decimal" Precision="18" Scale="5" />
+          <Property Name="feed_unit" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="div_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="chg_ver" Type="Int32" />
+          <Property Name="chg_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="remark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+          <Property Name="id" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="d_bom_info_interface">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ver" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="style_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="style_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_info_interface_29062020">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ver" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="style_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="style_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_info_interface_copy">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ver" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="style_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_part_info_interface">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bpid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_part_info_interface_copy">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bpid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_part_info_interface_copy2">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bpid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_line_info_interface">
+          <Key>
+            <PropertyRef Name="lid" />
+          </Key>
+          <Property Name="lid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="fac_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="line_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="line_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="bom_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_line_process_info_interface">
+          <Key>
+            <PropertyRef Name="dlpid" />
+          </Key>
+          <Property Name="dlpid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="line_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="process_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="process_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="process_type" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="prounit_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="item_vcd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="qc_range_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="man_num" Type="Decimal" Precision="7" Scale="1" />
+          <Property Name="color" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="photo_file" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="d_material_info_interface">
+          <Key>
+            <PropertyRef Name="mtid" />
+          </Key>
+          <Property Name="mtid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="mt_type" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="mt_cd" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no_origin" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="mt_nm" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="mf_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="gr_qty" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="unit_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="bundle_qty" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="bundle_unit" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="sp_cd" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="s_lot_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="item_vcd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="qc_range_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="width" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="width_unit" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="spec" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="spec_unit" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="area" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="area_unit" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="thick" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="thick_unit" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="stick" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="stick_unit" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="price" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="tot_price" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="price_unit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="price_least_unit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="photo_file" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_style_detail_interface">
+          <Key>
+            <PropertyRef Name="ssid" />
+          </Key>
+          <Property Name="ssid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="style_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="style_sub_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="style_sub_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="style_sub_vn_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_style_info_interface">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="style_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_cust_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_vn_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="wh_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="buyer_nm" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="ivtr_type" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="routing" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="prd_unit" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="s_length" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_width" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_height" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_top" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="case_pcs_qty" Type="Int32" />
+          <Property Name="c_length" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="c_width" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="c_height" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="c_cbm" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="prd_group" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="prd_ctgr" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="prd_brand" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="prd_app" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="fsc_type" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="fsc_prd_type" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="fsc_group" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ivt_group_08" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ivt_group_09" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ivt_group_10" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="s_weight" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_weight_unit" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="s_weight_ratio" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_volume" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_volume_unit" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="s_surface" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_surface_unit" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="s_tolerance" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="s_leadtime" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="md_cd" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="prj_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ssver" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="part_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="standard" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="cust_rev" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="order_num" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="pack_amt" Type="Int32" />
+          <Property Name="cav" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bom_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="tds_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="item_vcd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="qc_range_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="interface_info">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="inf_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="inf_last_time" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="last_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="mb_info_interface">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="userid" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="uname" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="nick_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="upw" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="grade" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="gender" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="depart_cd" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="depart_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="position_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="position_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="tel_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="cel_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="e_mail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="sms_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="join_dt" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="birth_dt" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="scr_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="mail_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="join_ip" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="join_domain" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ltacc_dt" Type="DateTime" Precision="0" />
+          <Property Name="ltacc_domain" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="mbout_dt" Type="DateTime" Precision="0" />
+          <Property Name="mbout_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="accblock_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="session_key" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="session_limit" Type="DateTime" Precision="0" />
+          <Property Name="memo" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="check_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="rem_me" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="mbjoin_dt" Type="DateTime" Precision="0" />
+          <Property Name="log_ip" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="lct_cd" Type="String" MaxLength="18" Unicode="false" FixedLength="false" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+          <Property Name="re_mark" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="p_mpo_detail_interface">
+          <Key>
+            <PropertyRef Name="pdid" />
+          </Key>
+          <Property Name="pdid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mdpo_no" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_cd" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="md_sts_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="lct_cd" Type="String" MaxLength="18" Unicode="false" FixedLength="false" />
+          <Property Name="exp_input_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="public_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="need_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="feed_size" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="feed_unit" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="pur_bundle_qty" Type="Int32" />
+          <Property Name="bundle_unit" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="act_pur_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="qty_stk" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="pur_unit_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="unit_price" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit_stk" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="unit_price_stk" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="price_unit_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="tot_pur_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="last_unit_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="tot_last_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="vat_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="vat_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="pay_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="act_pay_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="rec_input_dt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="pass_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="bundle_unit_qty" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="bundle_qty" Type="Int32" />
+          <Property Name="gr_qty" Type="Int32" />
+          <Property Name="qr_qty" Type="Int32" />
+          <Property Name="rec_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="rec_bundle_qty" Type="Int32" />
+          <Property Name="defect_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="def_reson_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="expiry_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="return_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="return_reson_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="sp_cd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="order_dt" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="pur_order_no" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="shipment" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="lot_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="voucher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="lct_sts_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="waybill_file" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+          <Property Name="po_sts" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="mpo_desc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_spec" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_width" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_height" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_thick" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="brand_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="brand_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="p_mpo_detail_interface_copy2">
+          <Key>
+            <PropertyRef Name="pdid" />
+          </Key>
+          <Property Name="pdid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mdpo_no" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_cd" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="md_sts_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="lct_cd" Type="String" MaxLength="18" Unicode="false" FixedLength="false" />
+          <Property Name="exp_input_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="public_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="need_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="feed_size" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="feed_unit" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="pur_bundle_qty" Type="Int32" />
+          <Property Name="bundle_unit" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="act_pur_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="qty_stk" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="pur_unit_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="unit_price" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="pur_unit_stk" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="unit_price_stk" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="price_unit_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="tot_pur_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="last_unit_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="tot_last_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="vat_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="vat_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="pay_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="act_pay_amt" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="rec_input_dt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="pass_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="bundle_unit_qty" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="bundle_qty" Type="Int32" />
+          <Property Name="gr_qty" Type="Int32" />
+          <Property Name="qr_qty" Type="Int32" />
+          <Property Name="rec_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="rec_bundle_qty" Type="Int32" />
+          <Property Name="defect_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="def_reson_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="expiry_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="return_qty" Type="Decimal" Precision="50" Scale="3" />
+          <Property Name="return_reson_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="sp_cd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="order_dt" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="pur_order_no" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="shipment" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="lot_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="voucher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="lct_sts_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="waybill_file" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+          <Property Name="po_sts" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="mpo_desc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_spec" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_width" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_height" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_thick" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="p_mpo_info_interface">
+          <Key>
+            <PropertyRef Name="pmid" />
+          </Key>
+          <Property Name="pmid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="order_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mpo_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="brand_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="brand_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="po_sts" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="sts_mt" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="po_no" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="purch_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="sp_cd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mpo_qty" Type="Int32" />
+          <Property Name="emp_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="emp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="p_mpo_info_interface_copy">
+          <Key>
+            <PropertyRef Name="pmid" />
+          </Key>
+          <Property Name="pmid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="mpo_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="order_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mpo_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="brand_no" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="brand_nm" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="po_sts" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="sts_mt" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="po_no" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="purch_cd" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="sp_cd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mpo_qty" Type="Int32" />
+          <Property Name="emp_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="emp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="s_order_info_interface">
+          <Key>
+            <PropertyRef Name="soid" />
+          </Key>
+          <Property Name="soid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="pm_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="po_no" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="po_no2" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="po_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="po_sts" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="so_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="branch_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="employee_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="sor_sts_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="contract_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="contract_dt" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_no_fgc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_nm_fgc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="prd_unit" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="bom_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="order_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="product_dt" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="delivery_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="dest_cd" Type="String" MaxLength="18" Unicode="false" FixedLength="false" />
+          <Property Name="prod_qty" Type="Int32" />
+          <Property Name="delivery_qty" Type="Int32" />
+          <Property Name="fo_qty" Type="Int32" />
+          <Property Name="so_qty" Type="Int32" />
+          <Property Name="fo_rm_qty" Type="Int32" />
+          <Property Name="so_rm_qty" Type="Int32" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="s_order_master_interface">
+          <Key>
+            <PropertyRef Name="smid" />
+          </Key>
+          <Property Name="smid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="pm_no" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="order_dt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="prod_cnt" Type="Int32" />
+          <Property Name="sp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="employee_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="sor_sts_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="contract_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="contract_dt" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="delivery_qty" Type="Int32" />
+          <Property Name="fo_qty" Type="Int32" />
+          <Property Name="so_qty" Type="Int32" />
+          <Property Name="fo_rm_qty" Type="Int32" />
+          <Property Name="so_rm_qty" Type="Int32" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="supplier_info_interface">
+          <Key>
+            <PropertyRef Name="spno" />
+          </Key>
+          <Property Name="spno" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="sp_cd" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="smt_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="currency" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="pirce_term" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="pay_term" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="agent_fee" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="transit_time" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="e_mail" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="contant_person" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="address" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="country_nm" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="bsn_tp" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="changer_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="phone_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="cell_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="fax_nb" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="web_site" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bom_part_info_interface_view">
+          <Key>
+            <PropertyRef Name="bpid" />
+          </Key>
+          <Property Name="bom_no2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="step_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="bpid" Type="Int32" Nullable="false" />
+          <Property Name="bom_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="part_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="mt_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="need_time" Type="Int32" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="s_order_info_interface_view">
+          <Key>
+            <PropertyRef Name="soid" />
+          </Key>
+          <Property Name="soid" Type="Int32" Nullable="false" />
+          <Property Name="pm_no" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="po_no" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="po_no2" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="po_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="po_sts" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="sp_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="so_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="branch_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="employee_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="sor_sts_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="contract_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="contract_dt" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_no" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_nm" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_no_fgc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="style_nm_fgc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="prd_unit" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="bom_no" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="order_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="product_dt" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="delivery_dt" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="dest_cd" Type="String" MaxLength="18" Unicode="false" FixedLength="false" />
+          <Property Name="prod_qty" Type="Int32" />
+          <Property Name="delivery_qty" Type="Int32" />
+          <Property Name="fo_qty" Type="Int32" />
+          <Property Name="so_qty" Type="Int32" />
+          <Property Name="fo_rm_qty" Type="Int32" />
+          <Property Name="so_rm_qty" Type="Int32" />
+          <Property Name="re_mark" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="use_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="del_yn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="reg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="reg_dt" Type="DateTime" Precision="0" />
+          <Property Name="chg_id" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="chg_dt" Type="DateTime" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="snk_interfaceModelStoreContainer" CdmEntityContainer="snk_interfaceEntities">
+          <EntitySetMapping Name="buyer_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.buyer_info_interface">
+              <MappingFragment StoreEntitySet="buyer_info_interface">
+                <ScalarProperty Name="byno" ColumnName="byno" />
+                <ScalarProperty Name="buyer_cd" ColumnName="buyer_cd" />
+                <ScalarProperty Name="buyer_nm" ColumnName="buyer_nm" />
+                <ScalarProperty Name="small_customer" ColumnName="small_customer" />
+                <ScalarProperty Name="brd_nm" ColumnName="brd_nm" />
+                <ScalarProperty Name="ceo_nm" ColumnName="ceo_nm" />
+                <ScalarProperty Name="manager_nm" ColumnName="manager_nm" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="phone_nb" ColumnName="phone_nb" />
+                <ScalarProperty Name="cell_nb" ColumnName="cell_nb" />
+                <ScalarProperty Name="fax_nb" ColumnName="fax_nb" />
+                <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="web_site" ColumnName="web_site" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_detail_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_detail_interface">
+              <MappingFragment StoreEntitySet="d_bom_detail_interface">
+                <ScalarProperty Name="bdid" ColumnName="bdid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="feed_unit" ColumnName="feed_unit" />
+                <ScalarProperty Name="div_cd" ColumnName="div_cd" />
+                <ScalarProperty Name="chg_ver" ColumnName="chg_ver" />
+                <ScalarProperty Name="chg_cd" ColumnName="chg_cd" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_detail_interface_copy">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_detail_interface_copy">
+              <MappingFragment StoreEntitySet="d_bom_detail_interface_copy">
+                <ScalarProperty Name="bdid" ColumnName="bdid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="lot_pct" ColumnName="lot_pct" />
+                <ScalarProperty Name="step_cd" ColumnName="step_cd" />
+                <ScalarProperty Name="item_cd" ColumnName="item_cd" />
+                <ScalarProperty Name="csp" ColumnName="csp" />
+                <ScalarProperty Name="feed_unit" ColumnName="feed_unit" />
+                <ScalarProperty Name="div_cd" ColumnName="div_cd" />
+                <ScalarProperty Name="chg_ver" ColumnName="chg_ver" />
+                <ScalarProperty Name="chg_cd" ColumnName="chg_cd" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="part_nm" ColumnName="part_nm" />
+                <ScalarProperty Name="key_id" ColumnName="key_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_detail_interface_copy_copy">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_detail_interface_copy_copy">
+              <MappingFragment StoreEntitySet="d_bom_detail_interface_copy_copy">
+                <ScalarProperty Name="bdid" ColumnName="bdid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="lot_pct" ColumnName="lot_pct" />
+                <ScalarProperty Name="step_cd" ColumnName="step_cd" />
+                <ScalarProperty Name="item_cd" ColumnName="item_cd" />
+                <ScalarProperty Name="csp" ColumnName="csp" />
+                <ScalarProperty Name="feed_unit" ColumnName="feed_unit" />
+                <ScalarProperty Name="div_cd" ColumnName="div_cd" />
+                <ScalarProperty Name="chg_ver" ColumnName="chg_ver" />
+                <ScalarProperty Name="chg_cd" ColumnName="chg_cd" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_info_interface">
+              <MappingFragment StoreEntitySet="d_bom_info_interface">
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="ver" ColumnName="ver" />
+                <ScalarProperty Name="style_no" ColumnName="style_no" />
+                <ScalarProperty Name="style_nm" ColumnName="style_nm" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_info_interface_29062020">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_info_interface_29062020">
+              <MappingFragment StoreEntitySet="d_bom_info_interface_29062020">
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="ver" ColumnName="ver" />
+                <ScalarProperty Name="style_no" ColumnName="style_no" />
+                <ScalarProperty Name="style_nm" ColumnName="style_nm" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_info_interface_copy">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_info_interface_copy">
+              <MappingFragment StoreEntitySet="d_bom_info_interface_copy">
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="ver" ColumnName="ver" />
+                <ScalarProperty Name="style_no" ColumnName="style_no" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_part_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_part_info_interface">
+              <MappingFragment StoreEntitySet="d_bom_part_info_interface">
+                <ScalarProperty Name="bpid" ColumnName="bpid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="part_nm" ColumnName="part_nm" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_part_info_interface_copy">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_part_info_interface_copy">
+              <MappingFragment StoreEntitySet="d_bom_part_info_interface_copy">
+                <ScalarProperty Name="bpid" ColumnName="bpid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="part_nm" ColumnName="part_nm" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_part_info_interface_copy2">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_part_info_interface_copy2">
+              <MappingFragment StoreEntitySet="d_bom_part_info_interface_copy2">
+                <ScalarProperty Name="bpid" ColumnName="bpid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="part_nm" ColumnName="part_nm" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_line_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_line_info_interface">
+              <MappingFragment StoreEntitySet="d_line_info_interface">
+                <ScalarProperty Name="lid" ColumnName="lid" />
+                <ScalarProperty Name="fac_cd" ColumnName="fac_cd" />
+                <ScalarProperty Name="line_no" ColumnName="line_no" />
+                <ScalarProperty Name="line_nm" ColumnName="line_nm" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_line_process_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_line_process_info_interface">
+              <MappingFragment StoreEntitySet="d_line_process_info_interface">
+                <ScalarProperty Name="dlpid" ColumnName="dlpid" />
+                <ScalarProperty Name="line_no" ColumnName="line_no" />
+                <ScalarProperty Name="process_no" ColumnName="process_no" />
+                <ScalarProperty Name="process_nm" ColumnName="process_nm" />
+                <ScalarProperty Name="process_type" ColumnName="process_type" />
+                <ScalarProperty Name="prounit_cd" ColumnName="prounit_cd" />
+                <ScalarProperty Name="item_vcd" ColumnName="item_vcd" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="qc_range_cd" ColumnName="qc_range_cd" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="man_num" ColumnName="man_num" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="photo_file" ColumnName="photo_file" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_material_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_material_info_interface">
+              <MappingFragment StoreEntitySet="d_material_info_interface">
+                <ScalarProperty Name="mtid" ColumnName="mtid" />
+                <ScalarProperty Name="mt_type" ColumnName="mt_type" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="mt_cd" ColumnName="mt_cd" />
+                <ScalarProperty Name="mt_no_origin" ColumnName="mt_no_origin" />
+                <ScalarProperty Name="mt_nm" ColumnName="mt_nm" />
+                <ScalarProperty Name="mf_cd" ColumnName="mf_cd" />
+                <ScalarProperty Name="gr_qty" ColumnName="gr_qty" />
+                <ScalarProperty Name="unit_cd" ColumnName="unit_cd" />
+                <ScalarProperty Name="bundle_qty" ColumnName="bundle_qty" />
+                <ScalarProperty Name="bundle_unit" ColumnName="bundle_unit" />
+                <ScalarProperty Name="sp_cd" ColumnName="sp_cd" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="s_lot_no" ColumnName="s_lot_no" />
+                <ScalarProperty Name="item_vcd" ColumnName="item_vcd" />
+                <ScalarProperty Name="qc_range_cd" ColumnName="qc_range_cd" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="width_unit" ColumnName="width_unit" />
+                <ScalarProperty Name="spec" ColumnName="spec" />
+                <ScalarProperty Name="spec_unit" ColumnName="spec_unit" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="area_unit" ColumnName="area_unit" />
+                <ScalarProperty Name="thick" ColumnName="thick" />
+                <ScalarProperty Name="thick_unit" ColumnName="thick_unit" />
+                <ScalarProperty Name="stick" ColumnName="stick" />
+                <ScalarProperty Name="stick_unit" ColumnName="stick_unit" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="tot_price" ColumnName="tot_price" />
+                <ScalarProperty Name="price_unit" ColumnName="price_unit" />
+                <ScalarProperty Name="price_least_unit" ColumnName="price_least_unit" />
+                <ScalarProperty Name="photo_file" ColumnName="photo_file" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_style_detail_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_style_detail_interface">
+              <MappingFragment StoreEntitySet="d_style_detail_interface">
+                <ScalarProperty Name="ssid" ColumnName="ssid" />
+                <ScalarProperty Name="style_no" ColumnName="style_no" />
+                <ScalarProperty Name="style_sub_no" ColumnName="style_sub_no" />
+                <ScalarProperty Name="style_sub_nm" ColumnName="style_sub_nm" />
+                <ScalarProperty Name="style_sub_vn_nm" ColumnName="style_sub_vn_nm" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_style_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_style_info_interface">
+              <MappingFragment StoreEntitySet="d_style_info_interface">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="style_no" ColumnName="style_no" />
+                <ScalarProperty Name="style_cust_no" ColumnName="style_cust_no" />
+                <ScalarProperty Name="style_nm" ColumnName="style_nm" />
+                <ScalarProperty Name="style_vn_nm" ColumnName="style_vn_nm" />
+                <ScalarProperty Name="wh_nm" ColumnName="wh_nm" />
+                <ScalarProperty Name="buyer_nm" ColumnName="buyer_nm" />
+                <ScalarProperty Name="ivtr_type" ColumnName="ivtr_type" />
+                <ScalarProperty Name="routing" ColumnName="routing" />
+                <ScalarProperty Name="prd_unit" ColumnName="prd_unit" />
+                <ScalarProperty Name="s_length" ColumnName="s_length" />
+                <ScalarProperty Name="s_width" ColumnName="s_width" />
+                <ScalarProperty Name="s_height" ColumnName="s_height" />
+                <ScalarProperty Name="s_top" ColumnName="s_top" />
+                <ScalarProperty Name="case_pcs_qty" ColumnName="case_pcs_qty" />
+                <ScalarProperty Name="c_length" ColumnName="c_length" />
+                <ScalarProperty Name="c_width" ColumnName="c_width" />
+                <ScalarProperty Name="c_height" ColumnName="c_height" />
+                <ScalarProperty Name="c_cbm" ColumnName="c_cbm" />
+                <ScalarProperty Name="prd_group" ColumnName="prd_group" />
+                <ScalarProperty Name="prd_ctgr" ColumnName="prd_ctgr" />
+                <ScalarProperty Name="prd_brand" ColumnName="prd_brand" />
+                <ScalarProperty Name="prd_app" ColumnName="prd_app" />
+                <ScalarProperty Name="fsc_type" ColumnName="fsc_type" />
+                <ScalarProperty Name="fsc_prd_type" ColumnName="fsc_prd_type" />
+                <ScalarProperty Name="fsc_group" ColumnName="fsc_group" />
+                <ScalarProperty Name="ivt_group_08" ColumnName="ivt_group_08" />
+                <ScalarProperty Name="ivt_group_09" ColumnName="ivt_group_09" />
+                <ScalarProperty Name="ivt_group_10" ColumnName="ivt_group_10" />
+                <ScalarProperty Name="s_weight" ColumnName="s_weight" />
+                <ScalarProperty Name="s_weight_unit" ColumnName="s_weight_unit" />
+                <ScalarProperty Name="s_weight_ratio" ColumnName="s_weight_ratio" />
+                <ScalarProperty Name="s_volume" ColumnName="s_volume" />
+                <ScalarProperty Name="s_volume_unit" ColumnName="s_volume_unit" />
+                <ScalarProperty Name="s_surface" ColumnName="s_surface" />
+                <ScalarProperty Name="s_surface_unit" ColumnName="s_surface_unit" />
+                <ScalarProperty Name="s_tolerance" ColumnName="s_tolerance" />
+                <ScalarProperty Name="s_leadtime" ColumnName="s_leadtime" />
+                <ScalarProperty Name="md_cd" ColumnName="md_cd" />
+                <ScalarProperty Name="prj_nm" ColumnName="prj_nm" />
+                <ScalarProperty Name="ssver" ColumnName="ssver" />
+                <ScalarProperty Name="part_nm" ColumnName="part_nm" />
+                <ScalarProperty Name="standard" ColumnName="standard" />
+                <ScalarProperty Name="cust_rev" ColumnName="cust_rev" />
+                <ScalarProperty Name="order_num" ColumnName="order_num" />
+                <ScalarProperty Name="pack_amt" ColumnName="pack_amt" />
+                <ScalarProperty Name="cav" ColumnName="cav" />
+                <ScalarProperty Name="bom_type" ColumnName="bom_type" />
+                <ScalarProperty Name="tds_no" ColumnName="tds_no" />
+                <ScalarProperty Name="item_vcd" ColumnName="item_vcd" />
+                <ScalarProperty Name="qc_range_cd" ColumnName="qc_range_cd" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="interface_info">
+            <EntityTypeMapping TypeName="snk_interfaceModel.interface_info">
+              <MappingFragment StoreEntitySet="interface_info">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="inf_nm" ColumnName="inf_nm" />
+                <ScalarProperty Name="inf_last_time" ColumnName="inf_last_time" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="last_yn" ColumnName="last_yn" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mb_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.mb_info_interface">
+              <MappingFragment StoreEntitySet="mb_info_interface">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="uname" ColumnName="uname" />
+                <ScalarProperty Name="nick_name" ColumnName="nick_name" />
+                <ScalarProperty Name="upw" ColumnName="upw" />
+                <ScalarProperty Name="grade" ColumnName="grade" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="depart_cd" ColumnName="depart_cd" />
+                <ScalarProperty Name="depart_nm" ColumnName="depart_nm" />
+                <ScalarProperty Name="position_cd" ColumnName="position_cd" />
+                <ScalarProperty Name="position_nm" ColumnName="position_nm" />
+                <ScalarProperty Name="tel_nb" ColumnName="tel_nb" />
+                <ScalarProperty Name="cel_nb" ColumnName="cel_nb" />
+                <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+                <ScalarProperty Name="sms_yn" ColumnName="sms_yn" />
+                <ScalarProperty Name="join_dt" ColumnName="join_dt" />
+                <ScalarProperty Name="birth_dt" ColumnName="birth_dt" />
+                <ScalarProperty Name="scr_yn" ColumnName="scr_yn" />
+                <ScalarProperty Name="mail_yn" ColumnName="mail_yn" />
+                <ScalarProperty Name="join_ip" ColumnName="join_ip" />
+                <ScalarProperty Name="join_domain" ColumnName="join_domain" />
+                <ScalarProperty Name="ltacc_dt" ColumnName="ltacc_dt" />
+                <ScalarProperty Name="ltacc_domain" ColumnName="ltacc_domain" />
+                <ScalarProperty Name="mbout_dt" ColumnName="mbout_dt" />
+                <ScalarProperty Name="mbout_yn" ColumnName="mbout_yn" />
+                <ScalarProperty Name="accblock_yn" ColumnName="accblock_yn" />
+                <ScalarProperty Name="session_key" ColumnName="session_key" />
+                <ScalarProperty Name="session_limit" ColumnName="session_limit" />
+                <ScalarProperty Name="memo" ColumnName="memo" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="check_yn" ColumnName="check_yn" />
+                <ScalarProperty Name="rem_me" ColumnName="rem_me" />
+                <ScalarProperty Name="mbjoin_dt" ColumnName="mbjoin_dt" />
+                <ScalarProperty Name="log_ip" ColumnName="log_ip" />
+                <ScalarProperty Name="lct_cd" ColumnName="lct_cd" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="p_mpo_detail_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.p_mpo_detail_interface">
+              <MappingFragment StoreEntitySet="p_mpo_detail_interface">
+                <ScalarProperty Name="pdid" ColumnName="pdid" />
+                <ScalarProperty Name="mpo_no" ColumnName="mpo_no" />
+                <ScalarProperty Name="mdpo_no" ColumnName="mdpo_no" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="mt_cd" ColumnName="mt_cd" />
+                <ScalarProperty Name="md_sts_cd" ColumnName="md_sts_cd" />
+                <ScalarProperty Name="lct_cd" ColumnName="lct_cd" />
+                <ScalarProperty Name="exp_input_dt" ColumnName="exp_input_dt" />
+                <ScalarProperty Name="public_cd" ColumnName="public_cd" />
+                <ScalarProperty Name="need_qty" ColumnName="need_qty" />
+                <ScalarProperty Name="feed_size" ColumnName="feed_size" />
+                <ScalarProperty Name="feed_unit" ColumnName="feed_unit" />
+                <ScalarProperty Name="pur_bundle_qty" ColumnName="pur_bundle_qty" />
+                <ScalarProperty Name="bundle_unit" ColumnName="bundle_unit" />
+                <ScalarProperty Name="act_pur_qty" ColumnName="act_pur_qty" />
+                <ScalarProperty Name="qty_stk" ColumnName="qty_stk" />
+                <ScalarProperty Name="pur_unit" ColumnName="pur_unit" />
+                <ScalarProperty Name="pur_unit_nm" ColumnName="pur_unit_nm" />
+                <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+                <ScalarProperty Name="pur_unit_stk" ColumnName="pur_unit_stk" />
+                <ScalarProperty Name="unit_price_stk" ColumnName="unit_price_stk" />
+                <ScalarProperty Name="price_unit_cd" ColumnName="price_unit_cd" />
+                <ScalarProperty Name="tot_pur_amt" ColumnName="tot_pur_amt" />
+                <ScalarProperty Name="last_unit_amt" ColumnName="last_unit_amt" />
+                <ScalarProperty Name="tot_last_amt" ColumnName="tot_last_amt" />
+                <ScalarProperty Name="vat_cd" ColumnName="vat_cd" />
+                <ScalarProperty Name="vat_amt" ColumnName="vat_amt" />
+                <ScalarProperty Name="pay_amt" ColumnName="pay_amt" />
+                <ScalarProperty Name="act_pay_amt" ColumnName="act_pay_amt" />
+                <ScalarProperty Name="rec_input_dt" ColumnName="rec_input_dt" />
+                <ScalarProperty Name="pass_qty" ColumnName="pass_qty" />
+                <ScalarProperty Name="bundle_unit_qty" ColumnName="bundle_unit_qty" />
+                <ScalarProperty Name="bundle_qty" ColumnName="bundle_qty" />
+                <ScalarProperty Name="gr_qty" ColumnName="gr_qty" />
+                <ScalarProperty Name="qr_qty" ColumnName="qr_qty" />
+                <ScalarProperty Name="rec_qty" ColumnName="rec_qty" />
+                <ScalarProperty Name="rec_bundle_qty" ColumnName="rec_bundle_qty" />
+                <ScalarProperty Name="defect_qty" ColumnName="defect_qty" />
+                <ScalarProperty Name="def_reson_cd" ColumnName="def_reson_cd" />
+                <ScalarProperty Name="expiry_dt" ColumnName="expiry_dt" />
+                <ScalarProperty Name="return_qty" ColumnName="return_qty" />
+                <ScalarProperty Name="return_reson_cd" ColumnName="return_reson_cd" />
+                <ScalarProperty Name="sp_cd" ColumnName="sp_cd" />
+                <ScalarProperty Name="order_dt" ColumnName="order_dt" />
+                <ScalarProperty Name="pur_order_no" ColumnName="pur_order_no" />
+                <ScalarProperty Name="shipment" ColumnName="shipment" />
+                <ScalarProperty Name="lot_no" ColumnName="lot_no" />
+                <ScalarProperty Name="voucher" ColumnName="voucher" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="lct_sts_cd" ColumnName="lct_sts_cd" />
+                <ScalarProperty Name="waybill_file" ColumnName="waybill_file" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="po_sts" ColumnName="po_sts" />
+                <ScalarProperty Name="mpo_desc" ColumnName="mpo_desc" />
+                <ScalarProperty Name="mt_nm" ColumnName="mt_nm" />
+                <ScalarProperty Name="mt_spec" ColumnName="mt_spec" />
+                <ScalarProperty Name="mt_width" ColumnName="mt_width" />
+                <ScalarProperty Name="mt_height" ColumnName="mt_height" />
+                <ScalarProperty Name="mt_thick" ColumnName="mt_thick" />
+                <ScalarProperty Name="mt_re_mark" ColumnName="mt_re_mark" />
+                <ScalarProperty Name="brand_no" ColumnName="brand_no" />
+                <ScalarProperty Name="brand_nm" ColumnName="brand_nm" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="p_mpo_detail_interface_copy2">
+            <EntityTypeMapping TypeName="snk_interfaceModel.p_mpo_detail_interface_copy2">
+              <MappingFragment StoreEntitySet="p_mpo_detail_interface_copy2">
+                <ScalarProperty Name="pdid" ColumnName="pdid" />
+                <ScalarProperty Name="mpo_no" ColumnName="mpo_no" />
+                <ScalarProperty Name="mdpo_no" ColumnName="mdpo_no" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="mt_cd" ColumnName="mt_cd" />
+                <ScalarProperty Name="md_sts_cd" ColumnName="md_sts_cd" />
+                <ScalarProperty Name="lct_cd" ColumnName="lct_cd" />
+                <ScalarProperty Name="exp_input_dt" ColumnName="exp_input_dt" />
+                <ScalarProperty Name="public_cd" ColumnName="public_cd" />
+                <ScalarProperty Name="need_qty" ColumnName="need_qty" />
+                <ScalarProperty Name="feed_size" ColumnName="feed_size" />
+                <ScalarProperty Name="feed_unit" ColumnName="feed_unit" />
+                <ScalarProperty Name="pur_bundle_qty" ColumnName="pur_bundle_qty" />
+                <ScalarProperty Name="bundle_unit" ColumnName="bundle_unit" />
+                <ScalarProperty Name="act_pur_qty" ColumnName="act_pur_qty" />
+                <ScalarProperty Name="qty_stk" ColumnName="qty_stk" />
+                <ScalarProperty Name="pur_unit" ColumnName="pur_unit" />
+                <ScalarProperty Name="pur_unit_nm" ColumnName="pur_unit_nm" />
+                <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+                <ScalarProperty Name="pur_unit_stk" ColumnName="pur_unit_stk" />
+                <ScalarProperty Name="unit_price_stk" ColumnName="unit_price_stk" />
+                <ScalarProperty Name="price_unit_cd" ColumnName="price_unit_cd" />
+                <ScalarProperty Name="tot_pur_amt" ColumnName="tot_pur_amt" />
+                <ScalarProperty Name="last_unit_amt" ColumnName="last_unit_amt" />
+                <ScalarProperty Name="tot_last_amt" ColumnName="tot_last_amt" />
+                <ScalarProperty Name="vat_cd" ColumnName="vat_cd" />
+                <ScalarProperty Name="vat_amt" ColumnName="vat_amt" />
+                <ScalarProperty Name="pay_amt" ColumnName="pay_amt" />
+                <ScalarProperty Name="act_pay_amt" ColumnName="act_pay_amt" />
+                <ScalarProperty Name="rec_input_dt" ColumnName="rec_input_dt" />
+                <ScalarProperty Name="pass_qty" ColumnName="pass_qty" />
+                <ScalarProperty Name="bundle_unit_qty" ColumnName="bundle_unit_qty" />
+                <ScalarProperty Name="bundle_qty" ColumnName="bundle_qty" />
+                <ScalarProperty Name="gr_qty" ColumnName="gr_qty" />
+                <ScalarProperty Name="qr_qty" ColumnName="qr_qty" />
+                <ScalarProperty Name="rec_qty" ColumnName="rec_qty" />
+                <ScalarProperty Name="rec_bundle_qty" ColumnName="rec_bundle_qty" />
+                <ScalarProperty Name="defect_qty" ColumnName="defect_qty" />
+                <ScalarProperty Name="def_reson_cd" ColumnName="def_reson_cd" />
+                <ScalarProperty Name="expiry_dt" ColumnName="expiry_dt" />
+                <ScalarProperty Name="return_qty" ColumnName="return_qty" />
+                <ScalarProperty Name="return_reson_cd" ColumnName="return_reson_cd" />
+                <ScalarProperty Name="sp_cd" ColumnName="sp_cd" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="order_dt" ColumnName="order_dt" />
+                <ScalarProperty Name="pur_order_no" ColumnName="pur_order_no" />
+                <ScalarProperty Name="shipment" ColumnName="shipment" />
+                <ScalarProperty Name="lot_no" ColumnName="lot_no" />
+                <ScalarProperty Name="voucher" ColumnName="voucher" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="lct_sts_cd" ColumnName="lct_sts_cd" />
+                <ScalarProperty Name="waybill_file" ColumnName="waybill_file" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="po_sts" ColumnName="po_sts" />
+                <ScalarProperty Name="mpo_desc" ColumnName="mpo_desc" />
+                <ScalarProperty Name="mt_nm" ColumnName="mt_nm" />
+                <ScalarProperty Name="mt_spec" ColumnName="mt_spec" />
+                <ScalarProperty Name="mt_width" ColumnName="mt_width" />
+                <ScalarProperty Name="mt_height" ColumnName="mt_height" />
+                <ScalarProperty Name="mt_thick" ColumnName="mt_thick" />
+                <ScalarProperty Name="mt_re_mark" ColumnName="mt_re_mark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="p_mpo_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.p_mpo_info_interface">
+              <MappingFragment StoreEntitySet="p_mpo_info_interface">
+                <ScalarProperty Name="pmid" ColumnName="pmid" />
+                <ScalarProperty Name="mpo_no" ColumnName="mpo_no" />
+                <ScalarProperty Name="order_dt" ColumnName="order_dt" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="mpo_nm" ColumnName="mpo_nm" />
+                <ScalarProperty Name="brand_no" ColumnName="brand_no" />
+                <ScalarProperty Name="brand_nm" ColumnName="brand_nm" />
+                <ScalarProperty Name="po_sts" ColumnName="po_sts" />
+                <ScalarProperty Name="sts_mt" ColumnName="sts_mt" />
+                <ScalarProperty Name="po_no" ColumnName="po_no" />
+                <ScalarProperty Name="purch_cd" ColumnName="purch_cd" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="sp_cd" ColumnName="sp_cd" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="mpo_qty" ColumnName="mpo_qty" />
+                <ScalarProperty Name="emp_no" ColumnName="emp_no" />
+                <ScalarProperty Name="emp_nm" ColumnName="emp_nm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="p_mpo_info_interface_copy">
+            <EntityTypeMapping TypeName="snk_interfaceModel.p_mpo_info_interface_copy">
+              <MappingFragment StoreEntitySet="p_mpo_info_interface_copy">
+                <ScalarProperty Name="pmid" ColumnName="pmid" />
+                <ScalarProperty Name="mpo_no" ColumnName="mpo_no" />
+                <ScalarProperty Name="order_dt" ColumnName="order_dt" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="mpo_nm" ColumnName="mpo_nm" />
+                <ScalarProperty Name="brand_no" ColumnName="brand_no" />
+                <ScalarProperty Name="brand_nm" ColumnName="brand_nm" />
+                <ScalarProperty Name="po_sts" ColumnName="po_sts" />
+                <ScalarProperty Name="sts_mt" ColumnName="sts_mt" />
+                <ScalarProperty Name="po_no" ColumnName="po_no" />
+                <ScalarProperty Name="purch_cd" ColumnName="purch_cd" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+                <ScalarProperty Name="sp_cd" ColumnName="sp_cd" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="mpo_qty" ColumnName="mpo_qty" />
+                <ScalarProperty Name="emp_no" ColumnName="emp_no" />
+                <ScalarProperty Name="emp_nm" ColumnName="emp_nm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="s_order_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.s_order_info_interface">
+              <MappingFragment StoreEntitySet="s_order_info_interface">
+                <ScalarProperty Name="soid" ColumnName="soid" />
+                <ScalarProperty Name="pm_no" ColumnName="pm_no" />
+                <ScalarProperty Name="po_no" ColumnName="po_no" />
+                <ScalarProperty Name="po_no2" ColumnName="po_no2" />
+                <ScalarProperty Name="po_dt" ColumnName="po_dt" />
+                <ScalarProperty Name="po_sts" ColumnName="po_sts" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="so_no" ColumnName="so_no" />
+                <ScalarProperty Name="branch_nm" ColumnName="branch_nm" />
+                <ScalarProperty Name="employee_nm" ColumnName="employee_nm" />
+                <ScalarProperty Name="sor_sts_nm" ColumnName="sor_sts_nm" />
+                <ScalarProperty Name="contract_no" ColumnName="contract_no" />
+                <ScalarProperty Name="contract_dt" ColumnName="contract_dt" />
+                <ScalarProperty Name="style_no" ColumnName="style_no" />
+                <ScalarProperty Name="style_nm" ColumnName="style_nm" />
+                <ScalarProperty Name="style_no_fgc" ColumnName="style_no_fgc" />
+                <ScalarProperty Name="style_nm_fgc" ColumnName="style_nm_fgc" />
+                <ScalarProperty Name="prd_unit" ColumnName="prd_unit" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="order_dt" ColumnName="order_dt" />
+                <ScalarProperty Name="product_dt" ColumnName="product_dt" />
+                <ScalarProperty Name="delivery_dt" ColumnName="delivery_dt" />
+                <ScalarProperty Name="dest_cd" ColumnName="dest_cd" />
+                <ScalarProperty Name="prod_qty" ColumnName="prod_qty" />
+                <ScalarProperty Name="delivery_qty" ColumnName="delivery_qty" />
+                <ScalarProperty Name="fo_qty" ColumnName="fo_qty" />
+                <ScalarProperty Name="so_qty" ColumnName="so_qty" />
+                <ScalarProperty Name="fo_rm_qty" ColumnName="fo_rm_qty" />
+                <ScalarProperty Name="so_rm_qty" ColumnName="so_rm_qty" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="s_order_master_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.s_order_master_interface">
+              <MappingFragment StoreEntitySet="s_order_master_interface">
+                <ScalarProperty Name="smid" ColumnName="smid" />
+                <ScalarProperty Name="pm_no" ColumnName="pm_no" />
+                <ScalarProperty Name="order_dt" ColumnName="order_dt" />
+                <ScalarProperty Name="prod_cnt" ColumnName="prod_cnt" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="employee_nm" ColumnName="employee_nm" />
+                <ScalarProperty Name="sor_sts_nm" ColumnName="sor_sts_nm" />
+                <ScalarProperty Name="contract_no" ColumnName="contract_no" />
+                <ScalarProperty Name="contract_dt" ColumnName="contract_dt" />
+                <ScalarProperty Name="delivery_qty" ColumnName="delivery_qty" />
+                <ScalarProperty Name="fo_qty" ColumnName="fo_qty" />
+                <ScalarProperty Name="so_qty" ColumnName="so_qty" />
+                <ScalarProperty Name="fo_rm_qty" ColumnName="fo_rm_qty" />
+                <ScalarProperty Name="so_rm_qty" ColumnName="so_rm_qty" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="supplier_info_interface">
+            <EntityTypeMapping TypeName="snk_interfaceModel.supplier_info_interface">
+              <MappingFragment StoreEntitySet="supplier_info_interface">
+                <ScalarProperty Name="spno" ColumnName="spno" />
+                <ScalarProperty Name="sp_cd" ColumnName="sp_cd" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="smt_nm" ColumnName="smt_nm" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="pirce_term" ColumnName="pirce_term" />
+                <ScalarProperty Name="pay_term" ColumnName="pay_term" />
+                <ScalarProperty Name="agent_fee" ColumnName="agent_fee" />
+                <ScalarProperty Name="transit_time" ColumnName="transit_time" />
+                <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+                <ScalarProperty Name="contant_person" ColumnName="contant_person" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="country_nm" ColumnName="country_nm" />
+                <ScalarProperty Name="bsn_tp" ColumnName="bsn_tp" />
+                <ScalarProperty Name="changer_id" ColumnName="changer_id" />
+                <ScalarProperty Name="phone_nb" ColumnName="phone_nb" />
+                <ScalarProperty Name="cell_nb" ColumnName="cell_nb" />
+                <ScalarProperty Name="fax_nb" ColumnName="fax_nb" />
+                <ScalarProperty Name="web_site" ColumnName="web_site" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bom_part_info_interface_view">
+            <EntityTypeMapping TypeName="snk_interfaceModel.d_bom_part_info_interface_view">
+              <MappingFragment StoreEntitySet="d_bom_part_info_interface_view">
+                <ScalarProperty Name="bom_no2" ColumnName="bom_no2" />
+                <ScalarProperty Name="part_no2" ColumnName="part_no2" />
+                <ScalarProperty Name="step_cd" ColumnName="step_cd" />
+                <ScalarProperty Name="bpid" ColumnName="bpid" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="part_no" ColumnName="part_no" />
+                <ScalarProperty Name="part_nm" ColumnName="part_nm" />
+                <ScalarProperty Name="mt_no" ColumnName="mt_no" />
+                <ScalarProperty Name="need_time" ColumnName="need_time" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="s_order_info_interface_view">
+            <EntityTypeMapping TypeName="snk_interfaceModel.s_order_info_interface_view">
+              <MappingFragment StoreEntitySet="s_order_info_interface_view">
+                <ScalarProperty Name="soid" ColumnName="soid" />
+                <ScalarProperty Name="pm_no" ColumnName="pm_no" />
+                <ScalarProperty Name="po_no" ColumnName="po_no" />
+                <ScalarProperty Name="po_no2" ColumnName="po_no2" />
+                <ScalarProperty Name="po_dt" ColumnName="po_dt" />
+                <ScalarProperty Name="po_sts" ColumnName="po_sts" />
+                <ScalarProperty Name="sp_nm" ColumnName="sp_nm" />
+                <ScalarProperty Name="so_no" ColumnName="so_no" />
+                <ScalarProperty Name="branch_nm" ColumnName="branch_nm" />
+                <ScalarProperty Name="employee_nm" ColumnName="employee_nm" />
+                <ScalarProperty Name="sor_sts_nm" ColumnName="sor_sts_nm" />
+                <ScalarProperty Name="contract_no" ColumnName="contract_no" />
+                <ScalarProperty Name="contract_dt" ColumnName="contract_dt" />
+                <ScalarProperty Name="style_no" ColumnName="style_no" />
+                <ScalarProperty Name="style_nm" ColumnName="style_nm" />
+                <ScalarProperty Name="style_no_fgc" ColumnName="style_no_fgc" />
+                <ScalarProperty Name="style_nm_fgc" ColumnName="style_nm_fgc" />
+                <ScalarProperty Name="prd_unit" ColumnName="prd_unit" />
+                <ScalarProperty Name="bom_no" ColumnName="bom_no" />
+                <ScalarProperty Name="order_dt" ColumnName="order_dt" />
+                <ScalarProperty Name="product_dt" ColumnName="product_dt" />
+                <ScalarProperty Name="delivery_dt" ColumnName="delivery_dt" />
+                <ScalarProperty Name="dest_cd" ColumnName="dest_cd" />
+                <ScalarProperty Name="prod_qty" ColumnName="prod_qty" />
+                <ScalarProperty Name="delivery_qty" ColumnName="delivery_qty" />
+                <ScalarProperty Name="fo_qty" ColumnName="fo_qty" />
+                <ScalarProperty Name="so_qty" ColumnName="so_qty" />
+                <ScalarProperty Name="fo_rm_qty" ColumnName="fo_rm_qty" />
+                <ScalarProperty Name="so_rm_qty" ColumnName="so_rm_qty" />
+                <ScalarProperty Name="re_mark" ColumnName="re_mark" />
+                <ScalarProperty Name="use_yn" ColumnName="use_yn" />
+                <ScalarProperty Name="del_yn" ColumnName="del_yn" />
+                <ScalarProperty Name="reg_id" ColumnName="reg_id" />
+                <ScalarProperty Name="reg_dt" ColumnName="reg_dt" />
+                <ScalarProperty Name="chg_id" ColumnName="chg_id" />
+                <ScalarProperty Name="chg_dt" ColumnName="chg_dt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
