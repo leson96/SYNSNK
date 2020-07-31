@@ -44,6 +44,8 @@ namespace APPSYNCSNK
             //Opacity = 0;
 
             //base.OnLoad(e);
+
+
             txtminutes.Text = "15";
             btnon.PerformClick(); 
         }
